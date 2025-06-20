@@ -1,0 +1,27 @@
+name: Release CI
+
+on:
+  push:
+    branches:
+      - main ## corre workflow solo en push a main branch
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest # ejecuta los pasos / tasks en ubuntu
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4 # checkout repositorio (descarga ultimos cambios)
+      
+      - name: Setup Node JS
+        uses: actions/setup-node@v4 # instala / setup npm y node 20
+        with:
+          node-version: 20
+      
+      - name: Install dependencies
+        run: npm ci # instala dependencias de mi package-lock.json
+      
+      - name: Release with semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # token con permisos para escribir y leer en github
+        run: npx semantic-release # ejecuta release
