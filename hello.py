@@ -9,3 +9,7 @@ def hello_world():
 @app.route('/user')
 def user():
     return "<p>Hello User</p>"
+
+@app.route('/cat')
+def cat():
+    return "Car"
