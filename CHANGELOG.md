@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/DLC94/ubiquitous-octo-rotary-phone/compare/v1.0.0...v1.1.0) (2025-06-20)
+
+
+### Features
+
+* **api:** add Cat endpoint ([8d6071e](https://github.com/DLC94/ubiquitous-octo-rotary-phone/commit/8d6071efe7bb442a11d03ca9bceb9fd44e25ce46)), closes [#1](https://github.com/DLC94/ubiquitous-octo-rotary-phone/issues/1)
+
 # 1.0.0 (2025-06-20)
 
 
